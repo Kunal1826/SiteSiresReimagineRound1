@@ -4,8 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+     <style>
+        .main .square .slider{
+            transition: all ease-in 1.5s;
+        }
+        .curser{
+            transition: all linear 0.1s
+        }
+        .square{
+            transition: all ease 0.3s;
+        }
+     </style>
+</head> 
+<body class="bg-[#E4F1E8] font-[gilroy]">
+   <div class="main h-screen w-full overflow-hidden">
+   <div class="landing  h-screen w-full relative">
+    <div class="nav  full px-[20vh]  flex justify-between items-center py-5">
+        <div class="leftnav">
+            <img class="w-[18vw]" src="./mamaearthlogo.png" alt="">
+        </div>
+        <div class="rightnav flex gap-5 mt-2 items-center">
+            <a class=" underlines text-emerald-800 font-medium uppercase tracking-tight" href="#">Home</a>
+            <a class=" underlines text-emerald-800 font-medium uppercase tracking-tight" href="#">Ingredients</a>
+            <a class=" underlines text-emerald-800 font-medium uppercase tracking-tight" href="#">Blog</a>
+            <a class=" underlines text-emerald-800 font-medium uppercase tracking-tight" href="#">Plant Goodness</a>
+            <a class=" underlines text-emerald-800 font-medium uppercase tracking-tight" href="#">Store Locator</a>
+            <a href="#"><i class="ri-shopping-cart-line border-[2px] font-900 p-2 border-transparent rounded-full bg-[#59C792] font-medium hover:bg-transparent hover:border-black transition"></i></a>
+            <button class="Btn">
+                <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                              <div class="text">Logout</div>
+        </button>
+    </div>
+    </div>
+    <div class="mid px-[5vh] flex">
+        <div class="midleft w-[30vw]  relative">
+            <img class="w-full h-full object-cover object-center absolute z-[0] opacity-5" src="./sidebg.png" alt="">
+            <nav class="menu ">
+                <ul class="menu-list">
+                  <li>
+                    <a href="#" data-text="Face">Face</a>
+                  </li>
+                  <li>
+                    <a href="#" data-text="Hair">Hair</a>
+                  </li>
+                  <li>
+                    <a href="#" data-text="Makeup">Makeup</a>
+                  </li>
+                  <li>
+                    <a href="#" data-text="Body">Body</a>
+                  </li>
+                  <li>
+                    <a href="#" data-text="Babycare">Babycare</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        <div class="midcenter w-[30vw] h-[30vw] ml-[5vh] mt-[15vh]">
+            <div class="top flex flex-col  ">
+                <h1 class="text-4xl font-normal">WE PLANT <span class="font-medium text-4xl text-[#3D5A0A]"><i>GOODNESS</i> </span></h1>
+                <h1 class="counter text-green-500 text-4xl font-medium mt-8">000000</h1>
+                <p class=" mt-5 text-xl font-medium">Trees have got life already... <br>
+                    Everytime you buy from us, <br>we plant more trees!</p>
+            </div>
+            <div class="bottom mt-[7vh] ml-[vh]">
+              <div class="inputGroup">
+                <input type="text" required="" autocomplete="off">
+                <label for="name">Search</label>
+            </div>
+            <button class="button type1 ml-44">
+              <span class="btn-txt text-xs">All products</span>
+            </button>
+            </div>
+    </div>
+    </div>
+   
+    <div class="curser h-16 w-16 absolute rounded-full bg-[#20B3BA]"></div>
+    <div class="square h-[525px] w-[500px]  bg-transparent relative rounded-2xl left-[130vh] -top-[75vh] flex justify-center items-center overflow-hidden border-none">
+       <div class="slider absolute left-[3rem] flex">
+                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
+                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
+                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
+                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
+                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
+                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
+                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
+                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
+                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
+                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
+                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
+                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
+                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
+                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
+                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
+                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
+            </div>
+
+    </div>
+   <div class="image h-[60vh] w-[60vh] bg-[url(./plant.png)] bg-cover absolute -left-[15vh] top-[65vh]">
+   </div>
+   <div class="image h-[20vh] w-[20vh] bg-[url()] bg-cover bg-right absolute left-[48vh] top-[25vh]">
+  </div>
+   </div>
+   
+   </div>
+    <script src="script.js"></script>
 </body>
 </html>
