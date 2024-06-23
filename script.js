@@ -33,4 +33,4 @@ setInterval(function(){
  if(count <= 509491){
     counter.innerHTML = count
  }
-},10)
+},30)

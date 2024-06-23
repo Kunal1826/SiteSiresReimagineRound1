@@ -275,4 +275,26 @@ html,body{
     visibility: visible;
     transform: scale(100) translateX(2px);
   }
-  
+
+  @keyframes changeImage {
+  0%{
+    background-image: url("./product1.png");
+  }
+25%{
+  background-image : url("./product2.png") 
+}
+50%{
+  background-image: url("./product3.png")  
+}
+75%{
+  background-image: url("product4.png")
+}
+100%{
+  background-image: url("product5.png")
+}
+}
+
+.landing .imageslider{
+  animation:  changeImage 18s ease-in-out infinite 2s;
+}
+

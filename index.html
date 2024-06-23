@@ -25,7 +25,7 @@
 <body class="bg-[#E4F1E8] font-[gilroy]">
    <div class="main h-screen w-full overflow-hidden">
    <div class="landing  h-screen w-full relative">
-    <div class="nav  full px-[20vh]  flex justify-between items-center py-5">
+    <div class="nav  full px-[20vh] bg-sky-100/30 shadow-lg flex justify-between items-center py-5">
         <div class="leftnav">
             <img class="w-[18vw]" src="./mamaearthlogo.png" alt="">
         </div>
@@ -43,7 +43,7 @@
     </div>
     </div>
     <div class="mid px-[5vh] flex">
-        <div class="midleft w-[30vw]  relative">
+        <div class="midleft w-[30vw] -mt-[1vh] relative">
             <img class="w-full h-full object-cover object-center absolute z-[0] opacity-5" src="./sidebg.png" alt="">
             <nav class="menu ">
                 <ul class="menu-list">
@@ -60,25 +60,26 @@
                     <a href="#" data-text="Body">Body</a>
                   </li>
                   <li>
-                    <a href="#" data-text="Babycare">Babycare</a>
+                    <a href="#" data-text="Babycare">Baby</a>
                   </li>
                 </ul>
               </nav>
-        </div>
-        <div class="midcenter w-[30vw] h-[30vw] ml-[5vh] mt-[15vh]">
-            <div class="top flex flex-col  ">
-                <h1 class="text-4xl font-normal">WE PLANT <span class="font-medium text-4xl text-[#3D5A0A]"><i>GOODNESS</i> </span></h1>
-                <h1 class="counter text-green-500 text-4xl font-medium mt-8">000000</h1>
-                <p class=" mt-5 text-xl font-medium">Trees have got life already... <br>
-                    Everytime you buy from us, <br>we plant more trees!</p>
-            </div>
-            <div class="bottom mt-[7vh] ml-[vh]">
-              <div class="inputGroup">
+              <div class="inputGroup ml-20 -mt-[8vh]">
                 <input type="text" required="" autocomplete="off">
-                <label for="name">Search</label>
+                <label for="name">Search products</label>
             </div>
-            <button class="button type1 ml-44">
-              <span class="btn-txt text-xs">All products</span>
+        </div>
+        <div class="midcenter w-[30vw] ml-[4vh] h-[30vw] mt-[12vh]">
+            <div class="top flex flex-col  ">
+                <h1 class="text-lg font-normal ml-[5vh]">We plant <br> <span class="font-medium text-7xl text-[#3D5A0A]"><i>GOODNESS</i> </span></h1>
+                <div class="flex flex-col"><div class="div"><h1 class="counter text-green-500 text-5xl font-medium mt-3 ">000000</h1></div>
+                 <div class="div"> <p class=" mt-3 text- font-medium ml-[5vh]">Trees have got life already... <br>
+                  Everytime you buy from us,<br> we plant more trees!</p></div></div>
+            </div>
+            <div class="bottom mt-[7vh] -ml-[12vh] flex">
+             
+            <button class="button type1 ">
+              <span class="btn-txt text-xs h-fit">All products</span>
             </button>
             </div>
     </div>
@@ -86,30 +87,15 @@
    
     <div class="curser h-16 w-16 absolute rounded-full bg-[#20B3BA]"></div>
     <div class="square h-[525px] w-[500px]  bg-transparent relative rounded-2xl left-[130vh] -top-[75vh] flex justify-center items-center overflow-hidden border-none">
-       <div class="slider absolute left-[3rem] flex">
-                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
-                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
-                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
-                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
-                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
-                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
-                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
-                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
-                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
-                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
-                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
-                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
-                <img class="  w-[500px] object-cover  " src="./facewash.png" alt="">
-                <img class="w-[500px] object-cover " src="./shampoo.png" alt="">
-                <img class="w-[500px] object-cover   "  src="./ubtan.png" alt="">
-                <img class="w-[500px] object-cover   " src="./serum.png" alt="">
-            </div>
-
-    </div>
-   <div class="image h-[60vh] w-[60vh] bg-[url(./plant.png)] bg-cover absolute -left-[15vh] top-[65vh]">
+       </div>
+   <div class="image h-[50vh] w-[50vh] bg-[url(./plant.png)] bg-cover absolute -left-[15vh] top-[75vh]">
    </div>
    <div class="image h-[20vh] w-[20vh] bg-[url()] bg-cover bg-right absolute left-[48vh] top-[25vh]">
   </div>
+  <div class="halfcircle h-[700px] w-[700px] rounded-full bg-sky-400/10 absolute left-[45%] top-[70%] -translate-x-1/2 z-[0] flex justify-center"> 
+    <div class="flex items-center gap-2 justify-center -rotate-90"> <div class="line h-[1px] w-[350px] bg-white"></div> <h1 class="uppercase text-xs tracking-widest font-medium opacity-80">scroll</h1></div>
+</div>
+<div class="imageslider w-[70vh] h-[70vh] absolute top-[25vh] left-[135vh] z-[-1] bg-[url(./product1.png)] drop-shadow-[0_0.1px_50px_teal] bg-cover bg-center"></div>
    </div>
    
    </div>
