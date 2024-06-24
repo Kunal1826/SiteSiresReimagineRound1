@@ -227,9 +227,8 @@ html,body{
     margin: 0em;
     margin-left: 1.3em;
     padding: 0.4em;
-    background-color: #E4F1E8
+    background-color: white
   }
-  
   .inputGroup :is(input:focus, input:valid) {
     border-color: #00AEEF
   }
@@ -295,6 +294,6 @@ html,body{
 }
 
 .landing .imageslider{
-  animation:  changeImage 18s ease-in-out infinite 2s;
+  animation:  changeImage 25s  infinite 2s;
 }
 
