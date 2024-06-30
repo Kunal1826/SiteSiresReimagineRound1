@@ -294,6 +294,6 @@ html,body{
 }
 
 .landing .imageslider{
-  animation:  changeImage 25s  infinite 2s;
+  animation:  changeImage 25s  infinite;
 }
 
