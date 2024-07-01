@@ -14,14 +14,38 @@
         .offerslider{
             transition: all ease-in 1.5s;
         }
+        .customshadow {
+  box-shadow: 0px 0px 15px 5px rgb(225, 223, 223);
+}
+
+.reviews .cards .container:hover .cardo {
+  filter: blur(5px);
+}
+
+.reviews .cards .container .cardo {
+  transition: all ease 0.5s;
+}
+
+.reviews .cards .container .cardo:hover {
+  filter: blur(0px);
+  transform: scale(0.9);
+}
+
+.reviews .cards .maincontainer {
+  transition: all ease 0.5s;
+}
+
+.matter {
+  transition: all ease 0.5s;
+}
      </style>
 </head> 
-<body class="font-[gilroy]">
-   <div class="main h-screen w-full overflow-hidden">
+<body class="font-[gilroy] ">
+   <div class="main h-screen w-full bg-[edf7f0] overflow-hidden">
    <div class="landing  h-screen w-full relative">
     <div class="nav  full px-[20vh] bg-sky-100/30 shadow-lg flex justify-between items-center py-5">
         <div class="leftnav">
-            <img class="w-[18vw]" src="./mamaearthlogo.png" alt="">
+            <img class="w-[18vw]" src="./image/mamaearthlogo.png" alt=""> 
         </div>
         <div class="rightnav flex gap-10 mt-2 items-center">
             <a class=" underlines text-emerald-800 font-medium uppercase tracking-tight" href="#">Home</a>
@@ -38,7 +62,7 @@
     </div>
     <div class="mid px-[5vh] flex">
         <div class="midleft w-[30vw] -mt-[1vh] relative">
-            <img class="w-full h-full object-cover object-center absolute z-[0] opacity-5" src="./sidebg.png" alt="">
+            <img class="w-full h-full object-cover object-center absolute z-[0] opacity-5" src="./image/sidebg.png" alt="">
             <nav class="menu ">
                 <ul class="menu-list">
                   <li>
@@ -110,16 +134,844 @@
     <div class="curser h-16 w-16 absolute rounded-full bg-[#20B3BA]"></div>
     <div class="square h-[525px] w-[500px]  bg-transparent relative rounded-2xl left-[130vh] -top-[75vh] flex justify-center items-center overflow-hidden border-none">
        </div>
-   <div class="image h-[50vh] w-[50vh] bg-[url(./plant.png)] bg-cover absolute -left-[15vh] top-[75vh]">
+   <div class="image h-[50vh] w-[50vh] bg-[url(./image/plant.png)] bg-cover absolute -left-[15vh] top-[75vh]">
    </div>
    <div class="image h-[20vh] w-[20vh] bg-[url()] bg-cover bg-right absolute left-[48vh] top-[25vh]">
   </div>
   <div class="halfcircle h-[700px] w-[700px] rounded-full bg-sky-400/10 absolute left-[45%] top-[70%] -translate-x-1/2 z-[0] flex justify-center"> 
     <div class="flex items-center gap-2 justify-center -rotate-90"> <div class="line h-[1px] w-[350px] bg-black"></div> <h1 class="uppercase text-xs tracking-widest text-green-800 font-medium opacity-80">scroll</h1></div>
 </div>
-<div class="imageslider w-[65vh] h-[65vh] absolute top-[20vh] left-[136vh] z-[-1] bg-[url(./product1.png)] drop-shadow-[0_0.1px_50px_skyblue] bg-cover bg-center"></div>
+<div class="imageslider w-[65vh] h-[65vh] absolute top-[20vh] left-[136vh] z-[-1] bg-[uimage/rl(./image/product1.png)] drop-shadow-[0_0.1px_50px_skyblue] bg-cover bg-center"></div>
    </div>
    </div>
+
+ <div class="page3 flex flex-col items-center gap-36 p-12 justify-center mt-10">
+
+      <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">BEST SELLERS</h1>
+          <p class="mt-2 font-medium">Explore best-selling safe, natural, and 100% toxin-free baby and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby care journey</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="slides w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="leftcurser leftcont1 ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div id="container" class="container overflow-hidden flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="rightcurser rightcont1 ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+
+
+      <div class="maincontainer2 h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">NEW LAUNCHES</h1>
+          <p class="mt-2 font-medium">Explore the goodness of nature from Mamaearth. Take a look at our newly launched toxin-free and natural products for hair, skin, and babies.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="slides w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="leftcurser ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div id="container2" class="container2 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="rightcurser ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+      
+
+
+
+      <div class="maincontainer3 h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">MAKEUP</h1>
+          <p class="mt-2 font-medium">Color with care with our all-new colorcare range that’s 100% toxin-free and formulated with the goodness of natural ingredients. Check out our newly launched products & bring home your new favorites.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="slides w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="leftcurser ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div id="container3" class="container3 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="rightcurser ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+
+
+
+
+      <div class="maincontainer4 h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">ONION RANGE</h1>
+          <p class="mt-2 font-medium">Explore 100% toxin-free and safe Onion Range for Hair Fall, formulated with the goodness of natural ingredients and no harmful chemicals.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="slides w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="leftcurser ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container4 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="rightcurser ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+</div>
+   <div class="page2 flex flex-col items-center justify-center  gap-36 p-12 justify-center mt-20">
+      <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium uppercase">Lightning sale</h1>
+          <p class="mt-2 font-medium">Explore the goodness of nature from mamaearth.Take a look at our Lightning offers.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container11 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+<div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">SKIN CARE</h1>
+          <p class="mt-2 font-medium">Explore 100 % toxin-free and safe skincare products by mamaearth that are formulated with love and the goodness of natural ingredients.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container8 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+
+      
+
+
+      <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">UBTAN RANGE</h1>
+          <p class="mt-2 font-medium">Explore 100% toxin-free and safe Ubtan Range for Tan Removal and Radiant Skin, formulated with the goodness of natural ingredients and no harmful chemicals.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container10 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+
+
+
+
+      <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">BABY CARE</h1>
+          <p class="mt-2 font-medium">Your little bundle of joy deserves nothing but the best. Explore MadeSafe Certified, natural, 100% toxin-free & gentle baby care products by Mamaearth. Give your little one the care they deserve!</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="w-[1050px] flex gap-4 mt-8 items-center justify-center">
+          <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container9 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+    </div>
+<div class="page5 flex gap-36 p-12 justify-center items-center mt-10 ">
+
+      <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">SUMMER FAVORITES</h1>
+          <p class="mt-2 font-medium">Explore the goodness of nature from Mamaearth. Take a look at our toxin-free and natural products for hair, skin, and babies</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="w-[1050PX] flex gap-4 mt-8 items-center justify-center">
+          <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container5 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="rightcurser ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="page6 flex gap-8 p-12 justify-center mt-10">
+
+      <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+        <div class="heading text-center w-[40%]">
+          <h1 class="text-3xl font-medium">Hair Care
+            </h1>
+          <p class="mt-2 font-medium">Explore 100% toxin-free and safe Hair products, formulated with the goodness of natural ingredients and no harmful chemicals.</p>
+          <button
+            class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          >
+            View All
+          </button>
+
+        </div>
+        <div class="w-[1050PX] flex gap-4 mt-8 items-center justify-center">
+          <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+          <div class="container6 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+          </div>
+          <i class="ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+        </div>
+      </div>
+
+    </div>
+      <div class="page7 flex gap-8 p-12 justify-center mt-10">
+
+        <div class="maincontainer h-[630px] w-[80%] bg-[#e6f7eb] shadow-xl rounded-xl flex flex-col justify-center items-center ">
+          <div class="heading text-center w-[40%]">
+            <h1 class="text-3xl font-medium">VITAMIN C RANGE
+              </h1>
+            <p class="mt-2 font-medium">Explore 100% toxin-free and safe Vitamin C Range for Glowing and Radiant Skin, formulated with the goodness of natural ingredients and no harmful chemicals.</p>
+            <button
+              class="relative mt-4 py-2 px-8 text-black text-base font-bold  overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#abf2bf] before:to-[#a9ebb2] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+            >
+              View All
+            </button>
+  
+          </div>
+          <div class="w-[1050PX] flex gap-4 mt-8 items-center justify-center">
+            <i class="ri-arrow-left-wide-fill text-5xl text-teal-500"></i>
+            <div class="container7 overflow-x-scroll flex items-center flex-nowrap drop-shadow-xl  gap-12">  
+            </div>
+            <i class="ri-arrow-right-wide-fill text-5xl text-teal-500"></i>
+          </div>
+        </div>
+  </div>
+
+  <div class="revsandlogo w-full h-screen">
+    <div class="reviews w-full flex justify-evenly items-center px-10 mt-3">
+      <div class="heading relative mt-32">
+        <h1 class="relative head text-4xl font-medium tracking-[0px] bg-white ease-linear pb-20 z-[1]">What our
+          Customers
+          say</h1>
+        <div class="line h-[.35vh] bg-black w-[550px] absolute -left-[35%] top-[37%] z-[3]"></div>
+        <img class="h-20 image absolute top-[0%] left-[40%] z-[0] hover:-top-[70%] transition-all"
+          src="https://cdn-icons-png.flaticon.com/512/3126/3126647.png" alt="">
+      </div>
+      <div class="cards w-[800px] h-[65vh] pt-5 overflow-hidden relative">
+        <div class="maincontainer relative flex flex-nowrap w-full h-full">
+          <div class="container w-[800px] relative  shrink-0">
+            <div class="left w-[40%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px]  absolute top-[13%] customshadow scale-[.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I use Mamaearth's Onion Hair Fall Kit. It comprises Onion Shampoo,
+                  Onion
+                  Conditioner, and Onion Hair Oil that help reduce excessive hair fall and boost growth. I've had one of
+                  the best shopping experiences. Recently I also bought a body lotion and Onion Hair Oil from there. As
+                  for my shopping experience, it was safe and quick. The delivery was early and easy to track. The
+                  payment
+                  gateway is also secure.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Sajal_Goyal_GKFmIuZ.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Sajal Goyal</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo h-[220px] w-[385px]  absolute top-[50%] left-[2%] customshadow scale-[.7] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I wanted to use natural products for my baby and came across Mamaearth.
+                  I
+                  use its Baby Shampoo, Body Wash for Babies and Baby Hair Oil, and and they all work very effectively.
+                  So
+                  if you are looking for a brand with an app, a safe and secure payment gateway, and a wide range of
+                  toxin-free products, Mamaearth is the one for you!</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Gina_kPv81T7.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Geena</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right w-[60%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px] absolute top-[8.5%] left-[46%] customshadow p-4 scale-[1] flex flex-col justify-between">
+                <p class="text-xs font-semibold">I use Mamaearth's Onion Hair Fall Kit. It comprises Onion Shampoo,
+                  Onion
+                  Conditioner, and Onion Hair Oil that help reduce excessive hair fall and boost growth. I've had one of
+                  the best shopping experiences. Recently I also bought a body lotion and Onion Hair Oil from there. As
+                  for my shopping experience, it was safe and quick. The delivery was early and easy to track. The
+                  payment
+                  gateway is also secure.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Tanmaya_Shrivastav_JbDYODv.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Tanmay</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo w-[385px] h-[220px]  absolute left-[41%] top-[52%] customshadow scale-[0.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">Being made of natural and toxin-free ingredients, Mamaearth's skincare
+                  and hair care products are very effective. They make my skin and hair healthy. I use Ubtan Face Wash,
+                  which is great for sun tan removal and treating hyper-pigmentation. If you are looking for any issues
+                  related to your skincare or hair care plans, you should opt for these products.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Priyanshi_Singh_gHqZqXk.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Priyanshi Singh</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-[800px] relative  shrink-0">
+            <div class="left w-[40%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px]  absolute top-[13%] customshadow scale-[.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I live near the coastal region, and sun tan is a big issue here. A few
+                  months ago, I switched to Mamaearth Ubtan Face Wash, which has worked very well. I now have a natural
+                  glow on my face and my sun tan seems resolved too. Mamaearth's skincare products are made of natural
+                  ingredients and contain no harmful preservatives. Being affordable is another positive too.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Waris_Raza_0nBcBhl.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Waris Raza</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo h-[220px] w-[385px]  absolute top-[50%] left-[2%] customshadow scale-[.7] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I have always used only natural products for my baby. One day, I came
+                  across Mamaearth's products during an online search. I bought its Baby Shampoo, Toothpaste, and Face
+                  Cream; they all were toxin-free and effective. The shopping experience and payment system were safe,
+                  fast, and quick.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Manisha_tulV4fo.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Manisha</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right w-[60%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px] absolute top-[8.5%] left-[46%] customshadow p-4 scale-[1] flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-ccd5ddfe_1594058182687_original._CR0,271,600,600_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Samaya</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo w-[385px] h-[220px]  absolute left-[41%] top-[52%] customshadow scale-[0.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-af05db46_1582102497210_original._CR62,26,611,611_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Abhyudaya Singh</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-[800px] relative  shrink-0">
+            <div class="left w-[40%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px]  absolute top-[13%] customshadow scale-[.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I use Mamaearth's Onion Hair Fall Kit. It comprises Onion Shampoo,
+                  Onion
+                  Conditioner, and Onion Hair Oil that help reduce excessive hair fall and boost growth. I've had one of
+                  the best shopping experiences. Recently I also bought a body lotion and Onion Hair Oil from there. As
+                  for my shopping experience, it was safe and quick. The delivery was early and easy to track. The
+                  payment
+                  gateway is also secure.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Sajal_Goyal_GKFmIuZ.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Sajal Goyal</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo h-[220px] w-[385px]  absolute top-[50%] left-[2%] customshadow scale-[.7] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I wanted to use natural products for my baby and came across Mamaearth.
+                  I
+                  use its Baby Shampoo, Body Wash for Babies and Baby Hair Oil, and and they all work very effectively.
+                  So
+                  if you are looking for a brand with an app, a safe and secure payment gateway, and a wide range of
+                  toxin-free products, Mamaearth is the one for you!</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Gina_kPv81T7.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Geena</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right w-[60%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px] absolute top-[8.5%] left-[46%] customshadow p-4 scale-[1] flex flex-col justify-between">
+                <p class="text-xs font-semibold">I use Mamaearth's Onion Hair Fall Kit. It comprises Onion Shampoo,
+                  Onion
+                  Conditioner, and Onion Hair Oil that help reduce excessive hair fall and boost growth. I've had one of
+                  the best shopping experiences. Recently I also bought a body lotion and Onion Hair Oil from there. As
+                  for my shopping experience, it was safe and quick. The delivery was early and easy to track. The
+                  payment
+                  gateway is also secure.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Tanmaya_Shrivastav_JbDYODv.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Tanmay</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo w-[385px] h-[220px]  absolute left-[41%] top-[52%] customshadow scale-[0.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">Being made of natural and toxin-free ingredients, Mamaearth's skincare
+                  and hair care products are very effective. They make my skin and hair healthy. I use Ubtan Face Wash,
+                  which is great for sun tan removal and treating hyper-pigmentation. If you are looking for any issues
+                  related to your skincare or hair care plans, you should opt for these products.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Priyanshi_Singh_gHqZqXk.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Priyanshi Singh</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-[800px] relative  shrink-0">
+            <div class="left w-[40%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px]  absolute top-[13%] customshadow scale-[.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I live near the coastal region, and sun tan is a big issue here. A few
+                  months ago, I switched to Mamaearth Ubtan Face Wash, which has worked very well. I now have a natural
+                  glow on my face and my sun tan seems resolved too. Mamaearth's skincare products are made of natural
+                  ingredients and contain no harmful preservatives. Being affordable is another positive too.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Waris_Raza_0nBcBhl.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Waris Raza</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo h-[220px] w-[385px]  absolute top-[50%] left-[2%] customshadow scale-[.7] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I have always used only natural products for my baby. One day, I came
+                  across Mamaearth's products during an online search. I bought its Baby Shampoo, Toothpaste, and Face
+                  Cream; they all were toxin-free and effective. The shopping experience and payment system were safe,
+                  fast, and quick.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Manisha_tulV4fo.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Manisha</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right w-[60%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px] absolute top-[8.5%] left-[46%] customshadow p-4 scale-[1] flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-ccd5ddfe_1594058182687_original._CR0,271,600,600_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Samaya</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo w-[385px] h-[220px]  absolute left-[41%] top-[52%] customshadow scale-[0.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-af05db46_1582102497210_original._CR62,26,611,611_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Abhyudaya Singh</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-[800px] relative  shrink-0">
+            <div class="left w-[40%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px]  absolute top-[13%] customshadow scale-[.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I live near the coastal region, and sun tan is a big issue here. A few
+                  months ago, I switched to Mamaearth Ubtan Face Wash, which has worked very well. I now have a natural
+                  glow on my face and my sun tan seems resolved too. Mamaearth's skincare products are made of natural
+                  ingredients and contain no harmful preservatives. Being affordable is another positive too.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Waris_Raza_0nBcBhl.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Waris Raza</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo h-[220px] w-[385px]  absolute top-[50%] left-[2%] customshadow scale-[.7] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I have always used only natural products for my baby. One day, I came
+                  across Mamaearth's products during an online search. I bought its Baby Shampoo, Toothpaste, and Face
+                  Cream; they all were toxin-free and effective. The shopping experience and payment system were safe,
+                  fast, and quick.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Manisha_tulV4fo.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Manisha</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right w-[60%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px] absolute top-[8.5%] left-[46%] customshadow p-4 scale-[1] flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-ccd5ddfe_1594058182687_original._CR0,271,600,600_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Samaya</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo w-[385px] h-[220px]  absolute left-[41%] top-[52%] customshadow scale-[0.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-af05db46_1582102497210_original._CR62,26,611,611_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Abhyudaya Singh</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-[800px] relative  shrink-0">
+            <div class="left w-[40%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px]  absolute top-[13%] customshadow scale-[.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I live near the coastal region, and sun tan is a big issue here. A few
+                  months ago, I switched to Mamaearth Ubtan Face Wash, which has worked very well. I now have a natural
+                  glow on my face and my sun tan seems resolved too. Mamaearth's skincare products are made of natural
+                  ingredients and contain no harmful preservatives. Being affordable is another positive too.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Waris_Raza_0nBcBhl.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Waris Raza</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo h-[220px] w-[385px]  absolute top-[50%] left-[2%] customshadow scale-[.7] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I have always used only natural products for my baby. One day, I came
+                  across Mamaearth's products during an online search. I bought its Baby Shampoo, Toothpaste, and Face
+                  Cream; they all were toxin-free and effective. The shopping experience and payment system were safe,
+                  fast, and quick.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images.mamaearth.in/wysiwyg/Manisha_tulV4fo.jpg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Manisha</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right w-[60%] flex flex-col justify-between">
+              <div
+                class="top cardo w-[385px] h-[220px] absolute top-[8.5%] left-[46%] customshadow p-4 scale-[1] flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-ccd5ddfe_1594058182687_original._CR0,271,600,600_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Samaya</h1> <button class="px-2 rounded-md flex items-center bg-green-200">5
+                      <i class="ri-star-s-fill text-sm"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bottom cardo w-[385px] h-[220px]  absolute left-[41%] top-[52%] customshadow scale-[0.8] p-4 flex flex-col justify-between">
+                <p class="text-xs font-semibold">I recently started using Mamaearth's Onion Hair Fall Kit, which
+                  includes
+                  Onion Shampoo, Onion Conditioner, and Onion Hair Oil. This kit has been a game-changer for me,
+                  significantly reducing excessive hair fall and promoting hair growth. My overall shopping experience
+                  with Mamaearth has been fantastic. I also purchased a body lotion and more Onion Hair Oil during my
+                  last
+                  shopping spree.</p>
+                <div class="desc mt-3 flex gap-2">
+                  <div
+                    class="image h-16 w-16 rounded-full bg-center bg-cover bg-[url(https://images-eu.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-af05db46_1582102497210_original._CR62,26,611,611_._FMjpg_.jpeg)]">
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <h1 class="font-medium">Abhyudaya Singh</h1> <button
+                      class="px-2 rounded-md flex items-center bg-green-200">5 <i class="ri-star-s-fill text-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cursers flex w-[50%] ml-[104vh] gap-[55vh]">
+      <div class="leftcursero text-4xl opacity-50 hover:opacity-100 active:scale-90">
+        <i class="ri-arrow-left-wide-line"></i>
+      </div>
+      <div class="rightcursero text-4xl opacity-50 hover:opacity-100 active:scale-90">
+        <i class="ri-arrow-right-wide-line"></i>
+      </div>
+    </div>
+    <div class="safety w-full flex justify-evenly mt-14 ml">
+      <div class="one  h-36 flex gap-2 overflow-hidden ml-44">
+        <div class="logo w-44 relative bg-white z-[1] flex justify-end transition-all"> <img class="h-32"
+            src="https://images.mamaearth.in/wysiwyg/dermatology-tested-100x100.png" alt=""> </div>
+        <div class="matter relative top-[12%] -left-[72%] z-[0]">
+          <h1 class="font-semibold">Dermatologically Tested</h1>
+          <p class="font-medium">we ensure each product is tested <br> clinically on the sensitive human skin <br> to
+            ensure that is not allergic</p>
+        </div>
+      </div>
+      <div class="two h-36 flex gap-2 overflow-hidden">
+        <div class="logo w-44 relative bg-white z-[1] flex justify-end transition-all"> <img class="h-32"
+            src="https://images.mamaearth.in/wysiwyg/fda-100x100.jpg" alt=""> </div>
+        <div class="matter relative top-[12%] -left-[72%] z-[0]">
+          <h1 class="font-semibold">FDA Approved</h1>
+          <p class="font-medium">MamaEarth is FDA approved,which<br> means we are 100% safe to use for<br> babies as
+            well as mamas</p>
+        </div>
+      </div>
+      <div class="three  h-36  flex gap-2 overflow-hidden">
+        <div class="logo w-44 relative bg-white z-[1] flex justify-end transition-all"> <img class="h-32"
+            src="https://images.mamaearth.in/wysiwyg/msafe-100x100.jpg" alt=""> </div>
+        <div class="matter relative top-[12%] -left-[72%] z-[0]">
+          <h1 class="font-semibold">Made Safe Certified</h1>
+          <p class="font-medium">The MADE SAFE (made with <br> ingredients) seal means that a product is<br> literally
+            made with green ingredients</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer h-screen w-full">
+    <div class="upperfooter w-full px-52 pt-16 flex gap-12">
+      <iframe class="rounded-xl w-[50%]" width="506" height="300" src="https://www.youtube.com/embed/YROZybuYGUE" title="Goodness Inside: Its all in the little choices we make everyday #Mamaearth #NaturalIngredients" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="matter w-[50%] flex flex-col items-center gap-5">
+        <h1 class="text-3xl tracking-1 font-medium mt-2">Our Goodness Promise</h1>
+        <p class="text-center font-medium">At Mamaearth, we live to spread a little love and goodness every day. We believe that goodness isn't a superpower, nor a special gift, it's inside all of us and it shows in the little choices we make. Our mission is to bring you the best of nature through our purest and most nurturing products that are made without any toxins or harmful chemicals. For us goodness also means being good to the earth. Which is why we recycle more plastic than we use and we're PETA Certified - which means we never test on animals. This is our #GoodnessInside.</p>
+       <div class="buttons flex items-center justify-center gap-5">
+        <button class="button type1">
+          <span class="btn-txt text-xs h-fit">Our Pledges</span>
+        </button>
+        <a class="px-2 py-1 rounded-full border-1 bg-[#00bded] hover:bg-[#0094ea]" href="#">Shop now</a>
+       </div>
+      </div>
+    </div>
+    <div class="loverfooter w-full">
+      <div class="footerimage w-full h-44 bg-[url(https://media.licdn.com/dms/image/D4E3DAQEuzGtMSpTilw/image-scale_191_1128/0/1669388946283/bionetlnp_cover?e=2147483647&v=beta&t=qBbzCrH4uPjbIIdy4rFHSIex09BwFN0zkRhXP1VrxFc)] bg-center"></div>
+      <div class="imageextension w-full h-[27vh] bg-[#2C5847] text-zinc-200 flex justify-between">
+        <div class="line h-[1px] w-[160px] bg-black rotate-90 relative left-[33%] top-[43%]"></div>
+        <div class="line h-[1px] w-[160px] bg-black rotate-90 relative left-[50%] top-[43%]"></div>
+        <div class="left w-[33%]  relative flex justify-between -left-[13%] -top-[16%]">
+         <div class="leftleft w-[50%] flex flex-col justify-center items-center gap-6">
+          <a class="mt-2 font-medium" href="#">Privacy policy</a>
+          <a class="mt-1 font-medium" href="#">Return</a>
+          <a class="mt-1 font-medium" href="#">Track Orders</a>
+         <a class="mt-1 font-medium" href="#">About Us</a>
+         </div>
+         <div class="rightright w-[50%] flex flex-col justify-center items-center gap-6">
+          <a class="mt-1 font-medium" href="#">Beauty</a>
+          <a class="mt-1 font-medium" href="#">Makeup</a>
+          <a class="mt-1 font-medium" href="#">Ingredient</a>
+          <a class="mt-1 font-medium" href="#">Gift Pack</a>
+         </div>
+        </div>
+        <div class="mid w-[33%] relative -left-[8%] flex flex-col items-center">
+         <div class="topmid flex gap-20 justify-center">
+         <div class="truck flex flex-col items-center"> <i class="ri-truck-line text-5xl"></i> <div class="flex flex-col items-center leading-[20px]"><h1 class="font-medium">Free shipping</h1><h1 class="text-sm">above 399</h1></div></div>
+          <div class="wallet flex flex-col items-center"> <i class="ri-wallet-3-line text-5xl"></i><div class="flex flex-col items-center leading-[20px]"><h1 class="font-medium">COD Available</h1><h1 class="text-sm">@40 per order</h1></div></div>
+         </div>
+         <div class="midmid"><button class="px-2 py-1 border-[1px] border-white rounded-md mt-3 -ml-[2vh] hover:bg-white hover:text-[#2C5847]">Contact Us</button></div>
+         <div class="socials flex gap-5 mt-5 -ml-[2vh]">
+         <a href=""> <i class="text-xl ri-facebook-fill"></i></a>
+         <a href=""> <i class="text-xl ri-twitter-x-line"></i></a>
+          <a href=""><i class="text-xl ri-instagram-line"></i></a>
+          <a href=""><i class="text-xl ri-youtube-line"></i></a>
+          <a href=""><i class="text-xl ri-linkedin-box-line"></i></a>
+          <a href=""><i class="text-xl ri-pinterest-line"></i></a>
+         <a href=""><i class=" text-xl ri-message-2-line"></i></a>
+        </div>
+        </div>
+        <div class="right w-[33%] relative  mt-2 flex gap-28">
+         <div class="tags flex flex-col gap-6"> <a class="font-medium" href="">Account</a>
+          <a class="font-medium" href="">Orders</a>
+          <a class="font-medium" href="">Addresses</a></div>
+          <div class="achievement -mt-[3vh]"><img class="h-44" src="https://images.mamaearth.in/wysiwyg/Best-Brand500x5002x.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="payments w-full h-[60px] bg-[#22493a] flex justify-center gap-8">
+        <img class="h-16" src="https://cdn.iconscout.com/icon/free/png-256/free-upi-2085056-1747946.png?f=webp " alt=""><img class="h-18" src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png" alt=""><img class="h-5 mt-6" src="https://upload.wikimedia.org/wikipedia/donate/1/10/Amazon-Pay-logo-fullcolor-negative.png" alt=""><img class="h-9 mt-4" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Freecharge_logo.png" alt=""><img class="h-14" src="https://i.pinimg.com/originals/ce/c1/dd/cec1dd1d81590f5e6aac34f2a2fbb51f.png" alt=""><img src="https://cdn.freebiesupply.com/logos/large/2x/visa-logo-svg-vector.svg" alt=""><img class="h-10 mt-2" src="https://www.logo.wine/a/logo/Mastercard/Mastercard-Logo.wine.svg" alt=""><img class="h-10 mt-2" src="https://cdn-icons-png.flaticon.com/512/825/825539.png" alt=""><img class="h-16" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Rupay-Logo.png" alt=""><img class="h-16" src="https://cdn.iconscout.com/icon/free/png-256/free-netbanking-credit-debit-card-bank-transaction-3-32318.png" alt="">
+      </div>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
