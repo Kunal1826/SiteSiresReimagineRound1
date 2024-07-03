@@ -1,3 +1,1104 @@
+gsap.registerPlugin(ScrollTrigger);
+
+// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".mr"),
+  smooth: true
+});
+// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+locoScroll.on("scroll", ScrollTrigger.update);
+
+// tell ScrollTrigger to use these proxy methods for the ".mr" element since Locomotive Scroll is hijacking things
+ScrollTrigger.scrollerProxy(".mr", {
+  scrollTop(value) {
+    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+  getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  },
+  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+  pinType: document.querySelector(".mr").style.transform ? "transform" : "fixed"
+});
+
+
+
+
+
+// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+ScrollTrigger.refresh();
+
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('.mr'),
+  smooth: true
+});
+
+
+
+const tl=gsap.timeline()
+
+tl.from(".nav", {
+  x: -200,
+  y: -200,
+  opacity: 0,
+  backgroundColor: "black",
+  duration: 0.5,
+ 
+  
+});
+tl.from(".leftnav img",{
+  
+  opacity:0,
+  scale:0.1,
+  duration:0.2,
+  
+  
+})
+
+tl.from(".sign svg,.rightnav a",{
+ 
+  y:50,
+  opacity:0,
+  stagger:0.1,
+  duration:0.4,
+  color:"black",
+
+})
+
+
+tl.from(".imagecorner",{
+  x:-900,
+  opacity:0,
+  duration:0.2,
+  scale:0,
+  // scrollTrigger: {
+  //   trigger: '.imagecorner',
+  //   scroller: "body",
+  //   start:"top 20%",
+  //   end:"top 30%",
+  //   scrub:2
+
+
+
+
+  //   // start: "top 5%",
+   
+   
+  
+  // }
+})
+
+
+var main1=document.querySelector(".mr")
+var crs=document.querySelector(".cursor")
+main1.addEventListener("mousemove",function(dets){
+  crs.style.left=dets.x+"px"
+  crs.style.top=dets.y+"px"
+
+})
+
+tl.from(".menu-list li,input,label name",{
+  opacity:0,
+  scale:0.1,
+ 
+  x:-500,
+  stagger:0.1,
+  duration:0.5,
+  fontWeight:"900",
+
+})
+tl.from(".inputGroup ,.btn-txt",{
+  duration:0.4,
+  opacity:0,
+  stagger:0.3,
+})
+
+
+tl.from(".midcenter .button",{
+  y:-100,
+  opacity:1,
+  
+  duration:0.1,
+})
+
+tl.from(".midcenter h1",{
+  opacity:0,
+  scale:1,
+ 
+
+  y:-100,
+
+ 
+  duration:0.2,
+  fontWeight:"900",
+  color:"red",
+})
+tl.from(".midcenter p",{
+  opacity:0,
+  scale:1,
+ 
+
+  y:100,
+
+ 
+  duration:0.1,
+
+})
+
+
+
+
+tl.from(".imageslider",{
+  x:-40,
+  opacity:0,
+})
+tl.from(".halfcircle",{
+  y:-10,
+  duration:0.9,
+  opacity:0,
+ 
+  backgroundColor:"skyblue",
+  // // scrollTrigger:{
+  // //   markers:true,
+  // //   trigger:".halfcircle",
+  // //   scroller:"body",
+  // //   start:"top 1%",
+  
+  // //   scrub:true,
+  // // }
+  
+  
+})
+
+tl.from(".line,.tx h1",{
+  duration:1,
+  height:"20px",
+  rotate:90,
+})
+
+//page3
+
+tl.from(".p1 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p1",
+    scroller:".mr",
+    start:"top 4%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p1",{
+  opacity:0,
+  duration:0.3,
+  
+
+  scrollTrigger:{
+    trigger:".p1",
+    scroller:".mr",
+    start:"top 10%",
+    end:"top 120%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p1 .heading h1,.p1 .heading p",{
+  opacity:0,
+  duration:3,
+  x:600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".heading",
+    scroller:".mr",
+    start:"top 28%",
+    end:"top 190%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p1 .slides",{
+  y:-300,
+  
+  
+  opacity:0,
+  scale:0.2,
+  duration:0.3,
+  scrollTrigger:{
+    trigger:".p1 .slides",
+    scroller:".mr",
+    start:"top 32%",
+    end:"top 200%",
+    
+    scrub:3,
+    
+   
+
+  }
+
+
+
+
+})
+
+
+//page2
+
+tl.from(".p2 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p2",
+    scroller:".mr",
+    start:"top 4%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p2",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p2",
+    scroller:".mr",
+    start:"top 20%",
+    end:"top 120%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".heading2 h1,.heading2 p",{
+  opacity:0,
+  duration:3,
+  x:600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".heading2",
+    scroller:".mr",
+    start:"top 28%",
+    end:"top 190%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p2 .container11",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p2",
+    scroller:".mr",
+    start:"top 32%",
+    end:"top 200%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+//page 3
+
+
+tl.from(".p3 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p3",
+    scroller:".mr",
+    start:"top 4%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p3",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p3",
+    scroller:".mr",
+    start:"top 34%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p3 .heading h1,.p3 .heading p",{
+  opacity:0,
+  duration:3,
+  x:-600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p3 .heading",
+    scroller:".mr",
+    start:"top 38%",
+    end:"top 290%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p3 .container5",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p3",
+    scroller:".mr",
+    start:"top 40%",
+    end:"top 200%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+//page 4
+
+
+
+tl.from(".p4 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p4",
+    scroller:".mr",
+    start:"top 8%",
+    end:"top 260%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p4",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p4",
+    scroller:".mr",
+    start:"top 42%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p4 .heading h1,.p4 .heading p",{
+  opacity:0,
+  duration:3,
+  x:600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p4 .heading",
+    scroller:".mr",
+    start:"top 44%",
+    end:"top 230%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p4 .container8",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p4",
+    scroller:".mr",
+    start:"top 46%",
+    end:"top 250%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+
+//page 5
+
+tl.from(".p5 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p5",
+    scroller:".mr",
+    start:"top 18%",
+    end:"top 260%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p5",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p5",
+    scroller:".mr",
+    start:"top 48%",
+    end:"top 260%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p5 .heading h1,.p5 .heading p",{
+  opacity:0,
+  duration:3,
+  x:-600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p5 .heading",
+    scroller:".mr",
+    start:"top 50%",
+    end:"top 290%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p5 .container6",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p5",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 290%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+//page6
+
+tl.from(".p6 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p6",
+    scroller:".mr",
+    start:"top 14%",
+    end:"top 300%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p6",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p6",
+    scroller:".mr",
+    start:"top 54%",
+    end:"top 300%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p6 .heading h1,.p6 .heading p",{
+  opacity:0,
+  duration:3,
+  x:600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p6 .heading",
+    scroller:".mr",
+    start:"top 56%",
+    end:"top 320%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p6 .container2",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p6",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 340%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+//page 7
+
+
+
+tl.from(".p7 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p7",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p7",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p7",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p7 .heading h1,.p7 .heading p",{
+  opacity:0,
+  duration:3,
+  x:600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p7 .heading",
+    scroller:".mr",
+    start:"top 62%",
+    end:"top 370%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p7 .container3",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p7",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 390%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+//page 8
+
+tl.from(".p8 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p8",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p8",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p8",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p8 .heading h1,.p8 .heading p",{
+  opacity:0,
+  duration:3,
+  x:-600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p8 .heading",
+    scroller:".mr",
+    start:"top 62%",
+    end:"top 370%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p8 .container7",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p8",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 390%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+
+//page 9
+
+
+tl.from(".p9 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p9",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p9",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p9",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p9 .heading h1,.p9 .heading p",{
+  opacity:0,
+  duration:3,
+  x:-600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p9 .heading",
+    scroller:".mr",
+    start:"top 62%",
+    end:"top 370%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p9 .container10",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p9",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 390%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+//page 10
+
+
+
+tl.from(".p10 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p10",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 390%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p10",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p10",
+    scroller:".mr",
+    start:"top 70%",
+    end:"top 390%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p10 .heading h1,.p10 .heading p",{
+  opacity:0,
+  duration:3,
+  x:600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p10 .heading",
+    scroller:".mr",
+    start:"top 72%",
+    end:"top 400%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p10 .container9",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p10",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 410%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+//page 11
+
+tl.from(".p11 img",{
+  x:-100,
+  y:-100,
+  duration:1,
+  opacity:0,
+  scrollTrigger:{
+    trigger:".p11",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+  
+})
+
+tl.from(".p11",{
+  opacity:0,
+  duration:3,
+  
+
+  scrollTrigger:{
+    trigger:".p11",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p11 .heading h1,.p11 .heading p",{
+  opacity:0,
+  duration:3,
+  x:-600,
+  stagger:1 ,
+ 
+  
+
+  scrollTrigger:{
+    trigger:".p11 .heading",
+    scroller:".mr",
+    start:"top 62%",
+    end:"top 370%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+
+tl.from(".p11 .container4,.p11 .b11",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p11",
+    scroller:".mr",
+    
+    start:"top 0%",
+    end:"top 360%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
+
+
+
+
+tl.from(".reviews  h1",{
+  x:-300,
+  duration:1,
+
+
+})
+
+tl.from(".logo img",{
+  x:-1000,
+  y:-500,
+  rotate:360,
+  opacity:0,
+  stagger:0.7,
+  duartion:3,
+  scrollTrigger:{
+    scroller:".mr",
+    trigger:".logo img",
+    start:"top 20%",
+    end:"top 130%",
+    scrub:2
+  }
+})
+
+
+
+tl.from(".m11",{
+  x:-100,
+  y:-50,
+ 
+  opacity:0,
+ 
+  scrollTrigger:{
+    scroller:".mr",
+    trigger:".m11",
+    start:"top 10%",
+    end:"top 120%",
+   
+    scrub:2
+  }
+})
+
+
+
+
+
+
 var slider = document.querySelector(".offerslider");
 var slide = 0;
     var interval = setInterval(function() {
@@ -113,7 +1214,7 @@ var card8=""
 
 mamaearthskincare.forEach(function(value){
   card8+=`
-   <div class="card8">
+   <div class="card8 capitalize">
             <div class="imgBx">
               <img src="${value.imageUrl}">
             </div>
@@ -129,7 +1230,7 @@ mamaearthskincare.forEach(function(value){
               </div>
                  <div class="flex justify-center">
                  <button
-            class="relative flex  gap-6 mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+            class="relative flex  gap-6 mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
           >
             ADD TO CART  <h1>Price:${value.price}</h1> 
           </button>
@@ -255,7 +1356,7 @@ const mamaearthbabycare = [
   
   mamaearthbabycare.forEach(function(value){
   card9+=`
-   <div class="card9">
+   <div class="card9 capitalize">
             <div class="imgBx">
               <img src="${value.imageUrl}">
             </div>
@@ -271,7 +1372,7 @@ const mamaearthbabycare = [
               </div>
               <div class="flex justify-center">
                  <button
-            class="relative flex  gap-6 mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+            class="relative flex  gap-6 mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
           >
             ADD TO CART  <h1>${value.price}</h1> 
           </button>
@@ -400,7 +1501,7 @@ var card10=""
 
 mamaearthubtanrange.forEach(function(value){
   card10+=`
-   <div class="card10">
+   <div class="card10 capitalize">
             <div class="imgBx">
               <img src="${value.imageUrl}">
             </div>
@@ -416,7 +1517,7 @@ mamaearthubtanrange.forEach(function(value){
               </div>
               <div class="flex justify-center">
               <button
-            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
           >
             ADD TO CART <h1>${value.price}
           </button>
@@ -518,7 +1619,7 @@ const mamaearthligtheningsale = [
    price:"₹577",
    ratings:"5.0",
    reviews:"267",
-   imageUrl:"./image2/s 12.png",
+   imageUrl:"./image2/1_white_bg_5-removebg-preview.png",
  }
  
 ];
@@ -553,7 +1654,7 @@ card11 +=`
             </div>
             <div class="flex justify-center">
             <button
-          class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+          class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
         >
           ADD TO CART <h1>${value.price}
         </button>
@@ -567,23 +1668,23 @@ console.log(card11 )
 container11.innerHTML=card11 
 
 
-container8.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container8.scrollLeft +=evt.deltaY
-})
+// container8.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container8.scrollLeft +=evt.deltaY
+// })
 
-container9.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container9.scrollLeft +=evt.deltaY
-})
-container10.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container10.scrollLeft +=evt.deltaY
-})
-container11.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container11.scrollLeft +=evt.deltaY
-})
+// container9.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container9.scrollLeft +=evt.deltaY
+// })
+// container10.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container10.scrollLeft +=evt.deltaY
+// })
+// container11.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container11.scrollLeft +=evt.deltaY
+// })
 
 
 
@@ -708,7 +1809,7 @@ mamaearthBestSellers.forEach(function(value){
                 <h3>Review :${value.reviews}</h3>
               </div>
               <div class="flex justify-center">
-                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
                  ADD TO CART  <h1>${value.price}</h1>
                 </button>
               </div>
@@ -772,7 +1873,7 @@ const mamaearthNewLaunches= [
       imageUrl: "./products image/new launches/with-ingredient_4_1-removebg-preview.png",
   },
   {
-      name: "https://images.mamaearth.in/catalog/product/1/-/1-with-ingredients_10.jpg?format=auto&height=600",
+      name: "Beetroot Hydraful Sunscreen With Beetroot & Hyaluronic Acid - 50 g",
       price: "₹351",
       ratings: "5.0",
       reviews:"3" ,
@@ -806,7 +1907,7 @@ mamaearthNewLaunches.forEach(function(value){
                 <h3>Review :${value.reviews}</h3>
               </div>
               <div class="flex justify-center">
-                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
                  ADD TO CART  <h1>${value.price}</h1>
                 </button>
               </div>
@@ -902,7 +2003,7 @@ mamaearthMakeUp.forEach(function(value){
                 <h3>Review :${value.reviews}</h3>
               </div>
               <div class="flex justify-center">
-                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
                  ADD TO CART  <h1>${value.price}</h1>
                 </button>
               </div>
@@ -1007,7 +2108,7 @@ mamaearthOnionRange.forEach(function(value){
                 <h3>Review :${value.reviews}</h3>
               </div>
               <div class="flex justify-center">
-                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+                <button class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base rounded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
                  ADD TO CART  <h1>${value.price}</h1>
                 </button>
               </div>
@@ -1024,23 +2125,23 @@ container4.innerHTML=card4
 
 
 
-container.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container.scrollLeft +=evt.deltaY
-})
+// container.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container.scrollLeft +=evt.deltaY
+// })
 
-container2.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container2.scrollLeft +=evt.deltaY
-})
-container3.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container3.scrollLeft +=evt.deltaY
-})
-container4.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container4.scrollLeft +=evt.deltaY
-})
+// container2.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container2.scrollLeft +=evt.deltaY
+// })
+// container3.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container3.scrollLeft +=evt.deltaY
+// })
+// container4.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container4.scrollLeft +=evt.deltaY
+// })
 
 
 
@@ -1251,7 +2352,7 @@ const mamaearthvitaminc = [
 
 
 //product-5
-var container5=document.querySelector(".page5 .container5")
+var container5=document.querySelector(" .container5")
 var card5=document.querySelector(".card")
 var imgbx5=document.querySelector(".imgbx")
 var img5=document.querySelector("img")
@@ -1263,7 +2364,7 @@ var btn5=document.querySelector("button")
 
 //product - 6
  
-var container6=document.querySelector(".page6 .container6")
+var container6=document.querySelector(".container6")
 var card6=document.querySelector(".card")
 var imgbx6=document.querySelector(".imgbx")
 var img6=document.querySelector("img")
@@ -1276,7 +2377,7 @@ var btn6=document.querySelector("button")
 
 
 
-var container7=document.querySelector(".page7 .container7")
+var container7=document.querySelector(" .container7")
 var card7=document.querySelector(".card")
 var imgbx7=document.querySelector(".imgbx")
 var img7=document.querySelector("img")
@@ -1306,7 +2407,7 @@ mamaearthsummerfavorites.forEach(function(value){
               </div>
               <div class="flex justify-center">
               <button
-            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
             ADD TO CART <h1>${value.price}<h1>
           </button>
           </div>
@@ -1339,7 +2440,7 @@ mamaearthhaircare.forEach(function(value){
               </div>
               <div class="flex justify-center">
               <button
-            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
           >
             ADD TO CART <h1>${value.price}</h1>
           </button>
@@ -1373,7 +2474,7 @@ mamaearthvitaminc.forEach(function(value){
               </div>
               <div class="flex justify-center">
               <button
-            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[#e6f7eb] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#beeaca] before:to-[#beeaca] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
+            class="flex gap-6 relative mt-2 py-[4px] px-4  font-medium text-base nded-full overflow-hidden bg-[white] rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-[#67564f] hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#c4efff] before:to-[#c4efff] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
           >
             ADD TO CART <h1>${value.price}</h1>
           </button>
@@ -1386,19 +2487,19 @@ mamaearthvitaminc.forEach(function(value){
 console.log(card7)
 container7.innerHTML=card7
 
-container5.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container5.scrollLeft +=evt.deltaY
-})
+// container5.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container5.scrollLeft +=evt.deltaY
+// })
 
-container6.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container6.scrollLeft +=evt.deltaY
-})
-container7.addEventListener("wheel",function(evt){
-  evt.preventDefault();
-  container7.scrollLeft +=evt.deltaY
-})
+// container6.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container6.scrollLeft +=evt.deltaY
+// })
+// container7.addEventListener("wheel",function(evt){
+//   evt.preventDefault();
+//   container7.scrollLeft +=evt.deltaY
+// })
 
 
 
