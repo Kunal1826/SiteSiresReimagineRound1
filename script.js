@@ -1764,15 +1764,7 @@ const mamaearthligtheningsale = [
    reviews:"75",
    imageUrl:"./image2/s 11.png",
  },
- {
-   name:"Feather light liquid matte lipstick pack of 4 minis",
-   price:"₹577",
-   ratings:"5.0",
-   reviews:"267",
-   imageUrl:"./image2/1_white_bg_5-removebg-preview.png",
- }
- 
-];
+ ];
 
 
 var container11=document.querySelector(".page2 .container11")
