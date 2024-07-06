@@ -1252,7 +1252,7 @@ tl.from(".m11",{
 var slider = document.querySelector(".offerslider");
 var slide = 0;
     var interval = setInterval(function() {
-       if(slide < 270){ slide += 28;
+       if(slide < 200){ slide += 28;
         slider.style.left = "-" + slide + "vw";}
     }, 4000);
    
