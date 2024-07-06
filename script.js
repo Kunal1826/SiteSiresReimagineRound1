@@ -93,9 +93,9 @@ tl.from(".imagecorner",{
 })
 
 
-var main1=document.querySelector(".mr")
+var body=document.querySelector("body")
 var crs=document.querySelector(".cursor")
-main1.addEventListener("mousemove",function(dets){
+body.addEventListener("mousemove",function(dets){
   crs.style.left=dets.x+"px"
   crs.style.top=dets.y+"px"
 
@@ -262,9 +262,25 @@ tl.from(".p1 .slides",{
 
 //page2
 
-tl.from(".p2 img",{
-  x:-100,
-  y:-100,
+tl.from(".p2 #p2i1",{
+  // x:-100,
+  y:-200,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p2",
+    scroller:".mr",
+    start:"top 4%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+
+tl.from(".p2 #p2i2",{
+  // x:-100,
+  y:-300,
   duration:1,
   scrollTrigger:{
     trigger:".p2",
@@ -341,7 +357,7 @@ tl.from(".p2 .container11",{
 //page 3
 
 
-tl.from(".p3 img",{
+tl.from(".p3 #p3i1",{
   x:-100,
   y:-100,
   duration:1,
@@ -356,6 +372,22 @@ tl.from(".p3 img",{
 
   }
 })
+tl.from(".p3 #p3i2",{
+  x:100,
+   y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p3",
+    scroller:".mr",
+    start:"top 4%",
+    end:"top 210%",
+    
+    scrub:3,
+   
+
+  }
+})
+
 
 tl.from(".p3",{
   opacity:0,
@@ -500,9 +532,9 @@ tl.from(".p4 .container8",{
 
 //page 5
 
-tl.from(".p5 img",{
+tl.from(".p5 #p5i1",{
   x:-100,
-  y:-100,
+  // y:-100,
   duration:1,
   scrollTrigger:{
     trigger:".p5",
@@ -515,6 +547,22 @@ tl.from(".p5 img",{
 
   }
 })
+tl.from(".p5 #p5i2",{
+  x:100,
+  // y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p5",
+    scroller:".mr",
+    start:"top 18%",
+    end:"top 260%",
+    
+    scrub:3,
+   
+
+  }
+})
+
 
 tl.from(".p5",{
   opacity:0,
@@ -562,7 +610,7 @@ tl.from(".p5 .container6",{
   scrollTrigger:{
     trigger:".p5",
     scroller:".mr",
-    start:"top 0%",
+    start:"top 45%",
     end:"top 290%",
     
     scrub:3,
@@ -578,9 +626,24 @@ tl.from(".p5 .container6",{
 
 //page6
 
-tl.from(".p6 img",{
+tl.from(".p6 #p6i1",{
+  x:100,
+  y:180,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p6",
+    scroller:".mr",
+    start:"top 14%",
+    end:"top 300%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p6 #p6i2",{
   x:-100,
-  y:-100,
+  y:150,
   duration:1,
   scrollTrigger:{
     trigger:".p6",
@@ -640,7 +703,7 @@ tl.from(".p6 .container2",{
   scrollTrigger:{
     trigger:".p6",
     scroller:".mr",
-    start:"top 0%",
+    start:"top 46%",
     end:"top 340%",
     
     scrub:3,
@@ -720,7 +783,7 @@ tl.from(".p7 .container3",{
   scrollTrigger:{
     trigger:".p7",
     scroller:".mr",
-    start:"top 0%",
+    start:"top 30%",
     end:"top 390%",
     
     scrub:3,
@@ -736,9 +799,9 @@ tl.from(".p7 .container3",{
 
 //page 8
 
-tl.from(".p8 img",{
+tl.from(".p8 #p8i1",{
   x:-100,
-  y:-100,
+  // y:-100,
   duration:1,
   scrollTrigger:{
     trigger:".p8",
@@ -751,6 +814,22 @@ tl.from(".p8 img",{
 
   }
 })
+tl.from(".p8 #p8i2",{
+  x:100,
+  // y:100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p8",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+
 
 tl.from(".p8",{
   opacity:0,
@@ -798,7 +877,7 @@ tl.from(".p8 .container7",{
   scrollTrigger:{
     trigger:".p8",
     scroller:".mr",
-    start:"top 0%",
+    start:"top 30%",
     end:"top 390%",
     
     scrub:3,
@@ -816,9 +895,9 @@ tl.from(".p8 .container7",{
 //page 9
 
 
-tl.from(".p9 img",{
+tl.from(".p9 #p9i1",{
   x:-100,
-  y:-100,
+  // y:-100,
   duration:1,
   scrollTrigger:{
     trigger:".p9",
@@ -831,6 +910,23 @@ tl.from(".p9 img",{
 
   }
 })
+
+tl.from(".p9 #p9i2",{
+  x:150,
+  // y:-100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p9",
+    scroller:".mr",
+    start:"top 60%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+})
+
 tl.from(".p9",{
   opacity:0,
   duration:3,
@@ -877,7 +973,7 @@ tl.from(".p9 .container10",{
   scrollTrigger:{
     trigger:".p9",
     scroller:".mr",
-    start:"top 0%",
+    start:"top 46%",
     end:"top 390%",
     
     scrub:3,
@@ -894,7 +990,22 @@ tl.from(".p9 .container10",{
 
 
 
-tl.from(".p10 img",{
+tl.from(".p10 #p10i1",{
+  x:100,
+  y:100,
+  duration:1,
+  scrollTrigger:{
+    trigger:".p10",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 390%",
+    
+    scrub:3,
+   
+
+  }
+})
+tl.from(".p10 #p10i2",{
   x:-100,
   y:-100,
   duration:1,
@@ -909,6 +1020,7 @@ tl.from(".p10 img",{
 
   }
 })
+
 
 tl.from(".p10",{
   opacity:0,
@@ -956,7 +1068,7 @@ tl.from(".p10 .container9",{
   scrollTrigger:{
     trigger:".p10",
     scroller:".mr",
-    start:"top 0%",
+    start:"top 46%",
     end:"top 410%",
     
     scrub:3,
@@ -972,9 +1084,26 @@ tl.from(".p10 .container9",{
 
 //page 11
 
-tl.from(".p11 img",{
+tl.from(".p11 #p11i1",{
   x:-100,
-  y:-100,
+  // y:-100,
+  duration:1,
+  opacity:0,
+  scrollTrigger:{
+    trigger:".p11",
+    scroller:".mr",
+    start:"top 0%",
+    end:"top 350%",
+    
+    scrub:3,
+   
+
+  }
+  
+})
+tl.from(".p11 #p11i2",{
+  x:100,
+  // y:-100,
   duration:1,
   opacity:0,
   scrollTrigger:{
@@ -1049,6 +1178,27 @@ tl.from(".p11 .container4,.p11 .b11",{
 
 
 })
+tl.from(".p11 .container4",{
+  y:-300,
+  stagger:0.6,
+  
+  opacity:0,
+  scale:0.2,
+  scrollTrigger:{
+    trigger:".p10",
+    scroller:".mr",
+    start:"top 46%",
+    end:"top 410%",
+    
+    scrub:3,
+   
+
+  }
+
+
+
+
+})
 
 
 
@@ -1102,19 +1252,19 @@ tl.from(".m11",{
 var slider = document.querySelector(".offerslider");
 var slide = 0;
     var interval = setInterval(function() {
-        slide += 60;
-        slider.style.left = "-" + slide + "vh";
+       if(slide < 270){ slide += 28;
+        slider.style.left = "-" + slide + "vw";}
     }, 4000);
    
-var counter = document.querySelector(".counter")
-var count = 509400
+var countering = document.querySelector(".countering")
+var counting = 509400
 
 setInterval(function(){
- count++
- if(count <= 509491){
-    counter.innerHTML = count
+ counting++
+ if(counting <= 509491){
+    countering.innerHTML = counting
  }
-},30)
+},90)
 
 
 
@@ -1788,7 +1938,7 @@ const mamaearthBestSellers = [
 ];
 
 
-var container= document.querySelector(".container")
+var container1= document.querySelector(".container1")
 
 var card=""
 
@@ -1818,7 +1968,7 @@ mamaearthBestSellers.forEach(function(value){
         </div> `
 })
 
-container.innerHTML=card
+container1.innerHTML=card
 
 
 
@@ -2561,4 +2711,3 @@ logothreeimg.addEventListener("mouseleave",function(){
    logothree.style.left = "0%"
    matterthree.style.left = "-72%"
 })
-

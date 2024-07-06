@@ -1,3 +1,10 @@
+@font-face {
+  font-family: gilroy;
+  src: url(./Gilroy-Medium\ \(2\).woff2);
+}
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -10,6 +17,7 @@ html,body{
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  font-family: "gilroy";
 }
 body{
 position: relative;
@@ -24,10 +32,9 @@ align-items: center;
 height: 55px;
 width: 55px;
 mix-blend-mode: difference;
-background-color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 0.079);
 position: absolute;
-border-color: #030303;
-border-width: 2px;
+border: none;
 /* transition: all linear 0.2s; */
 border-radius: 50%;
 }
@@ -897,18 +904,18 @@ margin-right: 10px;
 }
 
 
-.container{
+.container1{
   position: relative;
 }
 
-.container::-webkit-scrollbar{
+.container1::-webkit-scrollbar{
   
   display: none;
 
     }
 
 
-.container .card{
+.container1 .card{
   position: relative;
   width: 270px;
   height: 360px;
@@ -918,7 +925,7 @@ margin-right: 10px;
   flex-shrink: 0;
 }
 
-.container .card:before{
+.container1 .card:before{
   content: '';
   position: absolute;
   top: 0;
@@ -930,11 +937,11 @@ margin-right: 10px;
   transition: 0.5s ease-in-out;
 }
 
-.container .card:hover:before{
+.container1 .card:hover:before{
   clip-path: circle(280px at 80% -20%);
 }
 
-.container .card:after{
+.container1 .card:after{
   position: absolute;
   top: 30%;
   left: -20%;
@@ -944,7 +951,7 @@ margin-right: 10px;
   color: rgba(255,255,25,0.05)
 }
 
-.container .card .imgBx{
+.container1 .card .imgBx{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -954,13 +961,13 @@ margin-right: 10px;
   transition: 0.5s;
 }
 
-.container .card:hover .imgBx{
+.container1 .card:hover .imgBx{
   top: 0%;
   transform: translateY(0%);
     
 }
 
-.container .card .imgBx img{
+.container1 .card .imgBx img{
   position: absolute;
   top: 40%;
   left: 50%;
@@ -968,7 +975,7 @@ margin-right: 10px;
   width: 200px;
 }
 
-.container .card .contentBx{
+.container1 .card .contentBx{
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -978,11 +985,11 @@ margin-right: 10px;
   z-index: 10;
 }
 
-.container .card:hover .contentBx{
+.container1 .card:hover .contentBx{
   height: 184px;
 }
 
-.container .card .contentBx h2{
+.container1 .card .contentBx h2{
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
@@ -992,7 +999,7 @@ margin-right: 10px;
   padding: 2px 8px;
 }
 
-.container .card .contentBx .rating, .container .card .contentBx .review {
+.container1 .card .contentBx .rating, .container1 .card .contentBx .review {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1003,19 +1010,19 @@ margin-right: 10px;
   padding-bottom: 0;
 }
 
-.container .card:hover .contentBx .rating{
+.container1 .card:hover .contentBx .rating{
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
 }
 
-.container .card:hover .contentBx .review{
+.container1 .card:hover .contentBx .review{
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
-.container .card .contentBx .rating h3, .container .card .contentBx .review h3{
+.container1 .card .contentBx .rating h3, .container1 .card .contentBx .review h3{
   color: #030303;
   font-weight: 500;
   font-size: 14px;
@@ -1037,7 +1044,7 @@ margin-right: 10px;
 
 
   
-.container2{
+.container1{
   position: relative;
 }
 
@@ -1463,7 +1470,7 @@ display: none;
 position: relative;
 width: 270px;
 height: 360px;
-background:#88f9aa;
+background:#a4d461;
 border-radius: 20px;
 overflow: hidden;
 flex-shrink: 0;
@@ -1477,7 +1484,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgb(62, 186, 243);
+background: rgb(77, 199, 255);
 clip-path: circle(100px at 80% 20%);
 transition: 0.5s ease-in-out;
 }
@@ -1895,4 +1902,3 @@ transition: all ease 0.5s;
 
   
   
-
